@@ -48,9 +48,9 @@ var (
 )
 
 func convertTicker(timeInSeconds int) (str string) {
-	minutes := timeInSeconds / 60
 	seconds := timeInSeconds % 60
-	hours := timeInSeconds / 60 / 60
+	minutes := timeInSeconds / 60
+	hours := minutes / 60
 	str = fmt.Sprintf("%02d:%02d:%02d", hours, minutes, seconds)
 	return
 }
